@@ -2,7 +2,7 @@ import React from 'react';
 import User from '../components/User'
 
 const Users = ({users}) => {
-    console.log(users)
+    // console.log(users)
     return (
         <>
         <h1>List of users</h1>
@@ -10,8 +10,8 @@ const Users = ({users}) => {
             users.map((user)=>{
                 return (
                     <div key={user.id}>
-                        <User user = {user} />
-                    </div>
+            <User user={user} />
+          </div>
                 )
             })
         }
