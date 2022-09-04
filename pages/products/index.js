@@ -4,16 +4,16 @@ const ProductList = ({products}) => {
     return (
         <>
       <h1>List of products</h1>
-      {products.map(product => {
-        return (
+      {products.map(product => (
+        
           <div key={product.id}>
             <h2>
               {product.id} {product.title} {product.price}
             </h2>
             <hr />
           </div>
-        )
-      })}
+        
+      ))}
     </>
     );
 };
@@ -30,6 +30,6 @@ export async function getStaticProps() {
       props: {
         products: data
       },
-    //   revalidate: 30
+      revalidate: 30
     }
   }
